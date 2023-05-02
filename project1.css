@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: white;
+    color: black;
+}
+.bar{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 20px 10%;   
+    background-color: rgba(255, 255, 255, 30%);
+} 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px ;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+h1{
+    color: #fff;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;    
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top: 15%;
+    font-size: 35px;
+    text-align: center;
+}
+
+/* about */
+#about{
+    padding: 80px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 30%;
+}
+.about-col-1 img{
+    width: 110%;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    margin-left: 10px;
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 230;
+}
+.tab-subtitle{
+    display: flex;
+    margin: 20px 0 30px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;  
+}
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;    
+}
+.tab-links.active-links::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    transition-delay: 1s;
+    display: block;
+}
+
+/* songs */
+hr{
+    text-align: center;
+    height: 5px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    background-color: black;
+}
+.subtitle2{
+    font-size: 60px;
+    text-align: center;
+}
+.ok{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.overlay{
+    position: absolute;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 50%);
+    width: 50%;
+    margin-left: 120px;
+    border-radius: 20px;
+}
+.main{
+    font-size: 50px;
+    color: rgb(238, 75, 43);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.song{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.viss video{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    object-fit: cover;
+    margin-left: 100px;
+}
+.buttons{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border-color: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.noidungs{
+    display: none;
+}
+.noidungs.active-noidung{
+    display: block
+}
+.buttons.active-button{
+    background-color: red;
+}
+
+/* blackpink */
+.gallery{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+}
+.gallery > div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    opacity: 50%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+.gallery > div:hover{
+    flex: 5;
+    border-radius: 1rem;
+    opacity: 100%;
+    transform: scale(1.4);
+}
+.subtitle3{
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    color: pink;
+    background-color: black;
+    margin: 50px 0;
+}
+/* footer */
+footer{
+    padding: 100px;
+    background-color: black;
+    margin-top: 200px;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+a{
+    color: white;
+    display: grid;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+a:hover{
+    color: #f771f9;
+}
+.btn.btn2{
+    display: inline-block;
+    background: white;
+}
+.btn.btn2:hover{
+    background-color:pink;
+    color: white;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 6px;
+    margin: 10px 10px;
+    opacity: 85%;
+    display: inline-block;
+    margin-left:5px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 15em;
+}
+.copyright p{
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+/* css for small screen */
+@media only screen and (max-width: 600px){
+    #home{
+        background-image: url(/images/jisoophone.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+}

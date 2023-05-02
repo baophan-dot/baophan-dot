@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jisoo</title>
+        <meta charset="utf-8";
+        <meta name="viewpoint" content="width=device-width, initial-scale: 1.0">
+        <link href="project1.css" rel="stylesheet">
+        <link rel="icon" type="image" href="images/blackpink-logo-31B1268F1E-seeklogo.com.png">
+    </head>
+    <body>
+        <main>
+        <div id="home">
+            <div class="bar">
+                <div class="container">
+                    <nav>
+                        <h1>J I S O O</h1>    
+                        <ul>
+                            <li><a href="#home">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#songs">SONGS</a></li>
+                            <li><a href="#blackpink">BLACKPINK</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-text">
+                    <h1>THIS IS A PAGE ABOUT</h1><br>
+                    <h1> J I S O O</h1>
+                </div>
+            </div>
+        </div>
+
+<!-- about -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/jisoo.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h2 class="subtitle">ABOUT JISOO</h2><br>
+                        <p>Kim Ji-soo (Korean: 김지수; born January 3, 1995), known mononymously as Jisoo, is a South Korean singer and actress. She is a member of the South Korean girl group Blackpink, formed by YG Entertainment, in August 2016.</p><br>
+                        <p>Jisoo was the only one of two Korean singers added on the BoF 500 list, a "definitive professional index" of people shaping the $2.4 trillion fashion industry.As of February 2021, she is the third most followed K-pop idol on Instagram, along with band member Rosé.</p>
+                        <div class="tab-subtitle">
+                            <p class="tab-links active-links" onclick="opentab('Performer')">Performer</p>
+                            <p class="tab-links active" onclick="opentab('Actor')">Actor</p>
+                            <p class="tab-links active" onclick="opentab('Other')">Other</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Performer"> 
+                            <ul>
+                                <li>The main visual of the groups</li>
+                                <li>She's the lead vocalist and is considered an expert harmonizer.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Actor">
+                            <ul>
+                                <li>Outside of her music career, she made her acting debut with a cameo role in the 2015 series The Producers and played her first leading role in the JTBC series Snowdrop (2021–22), for which she won a Seoul International Drama Award.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Other">
+                            <ul>
+                                <li>In December 2019, Jisoo became a local ambassador for Dior's cosmetics brand, Dior Beauty.The next summer, Jisoo was recruited to be Dior's muse and modelled for Dior's Fall/Winter 2020 collection.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-links")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+        var noidungs = document.getElementsByClassName("noidungs")
+        var buttons = document.getElementsByClassName("buttons")
+        var vids = document.getElementsByClassName("vids")
+
+        function changevideo(tabname){
+            for(noidung of noidungs){
+                noidung.classList.remove("active-noidung")
+            }
+            for(button of buttons){
+                button.classList.remove("active-button")
+            }
+            event.currentTarget.classList.add("active-button")
+            document.getElementById(tabname).classList.add("active-noidung")
+        }
+</script>
+
+<!-- songs -->
+<hr>
+<div id="songs">
+    <h2 class="subtitle2">SONGS</h2>
+    <div class="ok">
+        <div class="right">
+            <video class="vids" src="images/JISOO - ‘꽃(FLOWER)’ M-V.mp4" autoplay muted loop></video>
+        </div>
+            <div class="overlay">
+                <div class="noidungs active-noidung" id="flower">
+                    <h2 class="main">Flower</h2>
+                    <div class="song">"Flower" was written by Vince, Teddy, Kush, and VVN and composed by the latter two alongside 24, who also handled the production. It is a mid-tempo dance, pop and trap song that incorporates traditional Korean melodies and Caribbean elements. It is characterized by a "distinctive" bass sound, minimal arrangement, poetic lyrics, and "Jisoo's unique vocals." Its lyrics talk about overcoming a toxic relationship,"leaving behind nothing but the whiff of flora."The word "Flower" was used as a metaphor to describe the singer's heartbreak, in line with the lyrics, "Nothing is left but the scent of flower." Eventually the "flowers come to their own and bloom" as the protagonists leave the toxic relationship and come to her own self, with the lyrics “Spring comes and we say bye bye bye."In terms of musical notation, the song was written in the key of A minor and has a tempo of 124 beats per minute.</p></div>
+                </div>
+                <div class="noidungs" id="eyes">
+                    <h2 class="main">All Eyes On Me</h2>
+                    <div class="song">"All Eyes on Me" is a song recorded by South Korean singer and Blackpink member Jisoo. It is the second track on her debut single album, Me (2023), which was released on March 31, 2023, through YG and Interscope. It is an upbeat dance-pop and EDM song with lyrics about a self-confident woman demanding her lover's attention. The track was written by Teddy, Vince and R. Tee, who handled the production alongside 24.</div>
+                </div>
+                <dive class="nav-btn">
+                    <button onclick="changevideo('flower')"  class="buttons active-button"></button>
+                    <button onclick="changevideo('eyes')"class="buttons" ></button>
+                </dive>
+            </div>
+    </div>
+</div>
+
+<!-- blackpink -->
+    <div id="blackpink">
+        <h2 class="subtitle3">BLACKPINK</h2>
+        <div class="gallery">
+            <div style="background-image: url(images/jisoo1.png);"></div>
+            <div style="background-image: url(images/lisa.jpg);"></div>
+            <div style="background-image: url(images/rose.jpg);"></div>
+            <div style="background-image: url(images/jennie.jpg);"></div>
+        </div>
+    </div>
+        </main>
+    </body>
+    <footer>
+        <div id="contact">
+            <div class="container1">
+                <div class="row1">
+                    <div class="contact-left">
+                        <h1 class="subtitle3">Contact Me</h1>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/blackpinkofficial/?hl=en" target="_blank">instagram</a>
+                            <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank">facebook</a>
+                        </div>
+                    </div>
+                    <div class="contact right">
+                        <form>
+                            <input type="text" name="Name" placeholder="  Your name" required>
+                            <textarea name="Messeage" rows="6" placeholder="  Your message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <div class="copyright">
+            <p>Copyright BaoPhan. Made with <3</p>
+        </div>
+        </div>
+    </footer>
+</html>
